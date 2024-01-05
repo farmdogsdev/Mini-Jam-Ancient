@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7dgstfethxbh"]
+
+[ext_resource type="Texture2D" uid="uid://dr2lar1505c0r" path="res://Assets/Sprites/mc-spritesheet.png" id="1_a6pef"]
+
+[node name="Character" type="Node2D"]
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_a6pef")

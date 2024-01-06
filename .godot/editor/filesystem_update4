@@ -1,5 +1,5 @@
-res://Scenes/character.tscn
 res://Scenes/main.tscn
-res://Scenes/world.tscn
-res://Assets/Tilemaps/basic-path/tileset_basic-path.tres
 res://Scenes/character.gd
+res://Scenes/npc.tscn
+res://Scenes/world.tscn
+res://Scenes/character.tscn

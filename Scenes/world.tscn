@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyfoqkdg5884u"]
+
+[ext_resource type="Texture2D" uid="uid://bbyhc1ue2iq3m" path="res://Assets/Sprites/terrain.png" id="1_nqoec"]
+
+[sub_resource type="TileSet" id="TileSet_kyoua"]
+tile_size = Vector2i(112, 112)
+
+[node name="World" type="Node2D"]
+
+[node name="Terrain" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(56, 57)
+scale = Vector2(7, 7)
+texture = ExtResource("1_nqoec")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="TileMap" type="TileMap" parent="."]
+texture_filter = 1
+tile_set = SubResource("TileSet_kyoua")
+format = 2

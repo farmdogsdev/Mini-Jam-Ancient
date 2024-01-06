@@ -2,14 +2,16 @@ extends CharacterBody2D
 
 var speed = 400
 var moving = false
+@export var character_name : String
 @onready var interaction_area : InteractionArea = $InteractionArea
 @onready var label = $Label
-
+@onready var box = $DialogueBox
 func _ready():
 	interaction_area.interact = Callable(self, "_on_interact")
 
 func _on_interact():
-	label.visible = !label.visible
+	box.visible = !box.visible
+		
 	#this is where dialogue will go
 
 func _physics_process(_delta):

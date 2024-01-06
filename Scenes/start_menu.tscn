@@ -1,0 +1,97 @@
+[gd_scene load_steps=7 format=3 uid="uid://byh8g73txoff"]
+
+[ext_resource type="Script" path="res://Scripts/start_menu.gd" id="1_1jfid"]
+[ext_resource type="PackedScene" uid="uid://bm312imnvjsvw" path="res://Scenes/options_screen.tscn" id="2_8qdjv"]
+[ext_resource type="PackedScene" uid="uid://idy41opmu163" path="res://Scenes/credits_screen.tscn" id="3_lekgj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_028es"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_th44t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x6ugd"]
+
+[node name="StartMenu" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.85098, 0.717647, 0.494118, 1)
+script = ExtResource("1_1jfid")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 290.5
+offset_right = 861.5
+offset_bottom = 151.0
+theme_override_colors/font_color = Color(0.129412, 0.145098, 0.160784, 1)
+theme_override_font_sizes/font_size = 110
+text = "Game Title"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CanvasLayer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -139.0
+offset_bottom = 139.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Start" type="Button" parent="CanvasLayer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.129412, 0.145098, 0.160784, 1)
+theme_override_font_sizes/font_size = 65
+theme_override_styles/normal = SubResource("StyleBoxEmpty_028es")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_th44t")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_x6ugd")
+text = "Start"
+
+[node name="Options" type="Button" parent="CanvasLayer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.129412, 0.145098, 0.160784, 1)
+theme_override_font_sizes/font_size = 65
+theme_override_styles/normal = SubResource("StyleBoxEmpty_028es")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_th44t")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_x6ugd")
+text = "Options"
+
+[node name="Credits" type="Button" parent="CanvasLayer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.129412, 0.145098, 0.160784, 1)
+theme_override_font_sizes/font_size = 65
+theme_override_styles/normal = SubResource("StyleBoxEmpty_028es")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_th44t")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_x6ugd")
+text = "Credits
+"
+
+[node name="Jam" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.129412, 0.145098, 0.160784, 1)
+theme_override_font_sizes/font_size = 45
+text = "Made for Mini Jam: Ancient"
+horizontal_alignment = 1
+
+[node name="OptionsScreen" parent="." instance=ExtResource("2_8qdjv")]
+visible = false
+layout_mode = 1
+
+[node name="CreditsScreen" parent="." instance=ExtResource("3_lekgj")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="CanvasLayer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CanvasLayer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="CanvasLayer/Credits" to="." method="_on_credits_pressed"]

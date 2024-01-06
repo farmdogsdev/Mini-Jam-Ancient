@@ -1,12 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://c4a1grueacysc"]
+[gd_scene load_steps=4 format=3 uid="uid://c4a1grueacysc"]
 
 [ext_resource type="PackedScene" uid="uid://b7dgstfethxbh" path="res://Scenes/player.tscn" id="1_171el"]
-[ext_resource type="Script" path="res://Scripts/main.gd" id="1_daygr"]
 [ext_resource type="PackedScene" uid="uid://cyfoqkdg5884u" path="res://Scenes/world.tscn" id="2_5vikh"]
 [ext_resource type="PackedScene" uid="uid://dkseu0v2254ei" path="res://Scenes/npc.tscn" id="3_h5om7"]
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_daygr")
 
 [node name="World" parent="." instance=ExtResource("2_5vikh")]
 
@@ -20,13 +18,3 @@ scale = Vector2(7, 7)
 [node name="NPC" parent="Entities" instance=ExtResource("3_h5om7")]
 position = Vector2(455, 308)
 scale = Vector2(7, 7)
-
-[node name="Events" type="Label" parent="."]
-z_index = 100
-offset_right = 93.0
-offset_bottom = 69.0
-theme_override_colors/font_color = Color(0, 0.439216, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 6
-theme_override_font_sizes/font_size = 30
-text = "test"

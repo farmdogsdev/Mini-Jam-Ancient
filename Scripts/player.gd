@@ -23,7 +23,7 @@ func get_input():
 		velocity.y -= 1
 	velocity = velocity.normalized() * speed
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	get_input()
 	move_and_slide()
 	position = position.clamp(Vector2.ZERO, screen_size)

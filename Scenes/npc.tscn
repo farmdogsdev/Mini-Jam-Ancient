@@ -1,12 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://dkseu0v2254ei"]
+[gd_scene load_steps=6 format=3 uid="uid://dkseu0v2254ei"]
 
+[ext_resource type="Script" path="res://Scripts/npc.gd" id="1_l88sf"]
 [ext_resource type="Texture2D" uid="uid://cd4p0cpvrwsny" path="res://Assets/Sprites/icon.svg" id="2_r3c0y"]
+[ext_resource type="PackedScene" uid="uid://dowge51i5schn" path="res://Scenes/interaction_area.tscn" id="3_47175"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ph12n"]
 radius = 6.0
 height = 12.0
 
-[node name="NPC" type="Area2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_ckvav"]
+radius = 12.0
+
+[node name="NPC" type="CharacterBody2D"]
+script = ExtResource("1_l88sf")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 z_index = 3
@@ -18,3 +24,19 @@ texture = ExtResource("2_r3c0y")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource("CapsuleShape2D_ph12n")
+
+[node name="InteractionArea" parent="." instance=ExtResource("3_47175")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_ckvav")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+texture_filter = 1
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 20.0
+theme_override_font_sizes/font_size = 15
+text = "test"
+horizontal_alignment = 1
+vertical_alignment = 1

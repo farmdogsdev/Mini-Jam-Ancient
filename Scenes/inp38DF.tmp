@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://qo8frtye42mf"]
+
+[ext_resource type="Script" path="res://Scripts/input_checker.gd" id="1_oqx6c"]
+
+[node name="InputChecker" type="Node2D"]
+script = ExtResource("1_oqx6c")
+ip_enum = null

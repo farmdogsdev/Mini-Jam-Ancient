@@ -13,3 +13,5 @@ res://Scripts/structures.gd
 res://Scripts/interaction_area.gd
 res://Scenes/interaction_manager.tscn
 res://Scripts/interaction_manager.gd
+res://Scenes/book.tscn
+res://Scripts/book.gd

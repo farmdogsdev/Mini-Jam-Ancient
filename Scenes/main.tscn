@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c4a1grueacysc"]
+[gd_scene load_steps=10 format=3 uid="uid://c4a1grueacysc"]
 
 [ext_resource type="PackedScene" uid="uid://b7dgstfethxbh" path="res://Scenes/player.tscn" id="1_171el"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_daygr"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bbyhc1ue2iq3m" path="res://Assets/Sprites/terrain.png" id="3_8life"]
 [ext_resource type="PackedScene" uid="uid://dkseu0v2254ei" path="res://Scenes/npc.tscn" id="3_h5om7"]
 [ext_resource type="PackedScene" uid="uid://cn6ur8wuwuy0p" path="res://Scenes/structures.tscn" id="4_02h8q"]
+[ext_resource type="PackedScene" uid="uid://bbdk68t8vejr3" path="res://Scenes/book.tscn" id="7_hud0h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_liw1i"]
 texture = ExtResource("3_8life")
@@ -76,3 +77,15 @@ position = Vector2(1754, 669)
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(1833, 233)
+
+[node name="Book1" parent="Entities" instance=ExtResource("7_hud0h")]
+position = Vector2(350, 927)
+scale = Vector2(3, 3)
+
+[node name="Book2" parent="Entities" instance=ExtResource("7_hud0h")]
+position = Vector2(1828, 655)
+scale = Vector2(3, 3)
+
+[node name="Book3" parent="Entities" instance=ExtResource("7_hud0h")]
+position = Vector2(2044, 189)
+scale = Vector2(3, 3)

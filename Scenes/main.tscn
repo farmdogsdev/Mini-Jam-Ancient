@@ -31,7 +31,6 @@ y_sort_enabled = true
 script = ExtResource("1_daygr")
 
 [node name="World" parent="." instance=ExtResource("2_5vikh")]
-visible = false
 
 [node name="Paths" type="Node2D" parent="."]
 

@@ -26,4 +26,4 @@ func get_input():
 func _physics_process(_delta):
 	get_input()
 	move_and_slide()
-	position = position.clamp(Vector2.ZERO, screen_size)
+	#position = position.clamp(Vector2.ZERO, screen_size)

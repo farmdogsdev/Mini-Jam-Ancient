@@ -6,6 +6,5 @@ func _ready():
 	debug = true
 
 
-func _input(event):
-	if debug:
-		$Events.text = "DEBUG - LAST ACTION: " + event.as_text()
+func _input(_event):
+	pass

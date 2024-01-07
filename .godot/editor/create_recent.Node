@@ -1,3 +1,6 @@
+TileMap
+Node2D
+Camera2D
 RichTextLabel
 Button
 HScrollBar
@@ -9,7 +12,3 @@ Control
 AnimatedSprite2D
 Sprite2D
 Panel
-CollisionShape2D
-Area2D
-CharacterBody2D
-Node2D

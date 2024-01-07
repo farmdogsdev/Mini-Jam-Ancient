@@ -1,13 +1,13 @@
 # adapted from https://kidscancode.org/godot_recipes/4.x/2d/grid_movement/index.html
 extends CharacterBody2D
 
-var tile_size = 112
+var tile_size = 64
 var screen_size
 var speed = 400
 var moving = false
 
 func _ready():
-	screen_size = get_viewport_rect().size
+	screen_size = Vector2(32.5*tile_size,15*tile_size)
 	position = Vector2(tile_size, tile_size)
 			
 
@@ -26,4 +26,4 @@ func get_input():
 func _physics_process(_delta):
 	get_input()
 	move_and_slide()
-	#position = position.clamp(Vector2.ZERO, screen_size)
+	position = position.clamp(Vector2.ZERO, screen_size)

@@ -8,3 +8,8 @@ res://Scenes/credits_screen.tscn
 res://Scenes/world.tscn
 res://Scenes/player.tscn
 res://Scripts/main.gd
+res://Scenes/structures.tscn
+res://Scripts/structures.gd
+res://Scripts/interaction_area.gd
+res://Scenes/interaction_manager.tscn
+res://Scripts/interaction_manager.gd

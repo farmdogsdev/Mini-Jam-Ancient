@@ -8,7 +8,7 @@ var moving = false
 
 func _ready():
 	screen_size = Vector2(32.5*tile_size,15*tile_size)
-	position = Vector2(tile_size, tile_size)
+	position = Vector2(160, 230)
 			
 
 func get_input():

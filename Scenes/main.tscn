@@ -47,7 +47,7 @@ position = Vector2(-1, 0)
 
 [node name="Player" parent="Entities" instance=ExtResource("1_171el")]
 y_sort_enabled = false
-position = Vector2(158, 206)
+position = Vector2(160, 230)
 
 [node name="Camera2D" type="Camera2D" parent="Entities/Player"]
 limit_left = 0

@@ -1,10 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1704607284
+::res://::1704614987
 README.md::TextFile::-1::1704493332::0::1::::<><>::
 ::res://Assets/::1704518238
 ::res://Assets/Audio/::1704493708
 ::res://Assets/Dialogue/::1704518238
-::res://Assets/Sprites/::1704611208
+::res://Assets/Sprites/::1704614139
 book.png::CompressedTexture2D::5023582469174392271::1704611200::1704611208::1::::<><>::
 buildings.png::CompressedTexture2D::7798640467168351894::1704614135::1704614139::1::::<><>::
 dialogue-scroll.png::CompressedTexture2D::2255545620388863557::1704565397::1704565401::1::::<><>::
@@ -13,24 +13,24 @@ icon.svg::CompressedTexture2D::5044230382103666234::1704492934::1704493892::1:::
 mc-spritesheet.png::CompressedTexture2D::8408879413665419435::1704494988::1704494988::1::::<><>::
 npc1.png::CompressedTexture2D::1701607289332314129::1704567435::1704567437::1::::<><>::
 terrain.png::CompressedTexture2D::2506584580687091828::1704581241::1704581242::1::::<><>::
-::res://Scenes/::1704612716
-credits_screen.gd::GDScript::-1::1704570207::0::1::::<>ColorRect<>::
-credits_screen.tscn::PackedScene::569214266148825698::1704605748::0::1::::<><>::res://Scenes/credits_screen.gd
+::res://Scenes/::1704615022
+book.tscn::PackedScene::2463466954281468114::1704614396::0::1::::<><>::uid://cdtpw0ywxer64::::res://Assets/Sprites/book.png<>res://Scripts/book.gd<>uid://dowge51i5schn::::res://Scenes/interaction_area.tscn<>uid://3k3mwsvf3v2i::::res://Scenes/dialogue_box.tscn
+credits_screen.tscn::PackedScene::569214266148825698::1704614899::0::1::::<><>::res://Scripts/credits_screen (2).gd
 dialogue_box.tscn::PackedScene::1987654089011958210::1704605748::0::1::::<><>::uid://dqcnoj6f87ado::::res://Assets/Sprites/dialogue_box.png<>res://Scripts/dialogue_box.gd<>uid://7eurh5nehjw4::::res://Assets/Sprites/dialogue-scroll.png
 dialogue_manager.tscn::PackedScene::5053542598444077876::1704568532::0::1::::<><>::res://Scripts/dialogue_manager.gd
 input_checker.tscn::PackedScene::1153936299841376113::1704526462::0::1::::<><>::res://Scripts/input_checker.gd
 interaction_area.tscn::PackedScene::8187695234002992627::1704568532::0::1::::<><>::res://Scripts/interaction_area.gd
 interaction_manager.tscn::PackedScene::2181439924181931825::1704611035::0::1::::<><>::res://Scripts/interaction_manager.gd
-main.tscn::PackedScene::6809908113439388118::1704612716::0::1::::<><>::uid://b7dgstfethxbh::::res://Scenes/player.tscn<>res://Scripts/main.gd<>uid://cyfoqkdg5884u::::res://Scenes/world.tscn<>uid://bbyhc1ue2iq3m::::res://Assets/Sprites/terrain.png<>uid://dkseu0v2254ei::::res://Scenes/npc.tscn<>uid://cn6ur8wuwuy0p::::res://Scenes/structures.tscn<>uid://bbdk68t8vejr3::::res://Scenes/book.tscn
-npc.tscn::PackedScene::7898589217670563396::1704612716::0::1::::<><>::res://Scripts/npc.gd<>uid://yijhukm04fd6::::res://Assets/Sprites/npc1.png<>uid://dowge51i5schn::::res://Scenes/interaction_area.tscn<>uid://3k3mwsvf3v2i::::res://Scenes/dialogue_box.tscn
+main.tscn::PackedScene::6809908113439388118::1704614979::0::1::::<><>::uid://b7dgstfethxbh::::res://Scenes/player.tscn<>res://Scripts/main.gd<>uid://cyfoqkdg5884u::::res://Scenes/world.tscn<>uid://bbyhc1ue2iq3m::::res://Assets/Sprites/terrain.png<>uid://dkseu0v2254ei::::res://Scenes/npc.tscn<>uid://cn6ur8wuwuy0p::::res://Scenes/structures.tscn<>uid://bbdk68t8vejr3::::res://Scenes/book.tscn
+npc.tscn::PackedScene::7898589217670563396::1704614396::0::1::::<><>::res://Scripts/npc.gd<>uid://yijhukm04fd6::::res://Assets/Sprites/npc1.png<>uid://dowge51i5schn::::res://Scenes/interaction_area.tscn<>uid://3k3mwsvf3v2i::::res://Scenes/dialogue_box.tscn
 options_screen.tscn::PackedScene::3288116682054076640::1704605748::0::1::::<><>::res://Scripts/options_screen.gd
-player.tscn::PackedScene::4639054265494312237::1704612716::0::1::::<><>::res://Scripts/player.gd<>uid://dr2lar1505c0r::::res://Assets/Sprites/mc-spritesheet.png<>uid://dowge51i5schn::::res://Scenes/interaction_area.tscn
-book.tscn::PackedScene::2463466954281468114::1704612716::0::1::::<><>::uid://cdtpw0ywxer64::::res://Assets/Sprites/book.png<>res://Scripts/book.gd<>uid://dowge51i5schn::::res://Scenes/interaction_area.tscn<>uid://3k3mwsvf3v2i::::res://Scenes/dialogue_box.tscn
-start_menu.tscn::PackedScene::120218225756038607::1704605748::0::1::::<><>::res://Scripts/start_menu.gd<>uid://bm312imnvjsvw::::res://Scenes/options_screen.tscn<>uid://idy41opmu163::::res://Scenes/credits_screen.tscn
-structures.tscn::PackedScene::5750538511603363137::1704611035::0::1::::<><>::res://Scripts/structures.gd<>uid://djdyp7jpngwa5::::res://Assets/Sprites/buildings.png<>uid://dowge51i5schn::::res://Scenes/interaction_area.tscn<>uid://3k3mwsvf3v2i::::res://Scenes/dialogue_box.tscn
+player.tscn::PackedScene::4639054265494312237::1704614396::0::1::::<><>::res://Scripts/player.gd<>uid://dr2lar1505c0r::::res://Assets/Sprites/mc-spritesheet.png<>uid://dowge51i5schn::::res://Scenes/interaction_area.tscn
+start_menu.tscn::PackedScene::120218225756038607::1704615022::0::1::::<><>::res://Scripts/start_menu.gd<>uid://bm312imnvjsvw::::res://Scenes/options_screen.tscn<>uid://idy41opmu163::::res://Scenes/credits_screen.tscn
+structures.tscn::PackedScene::5750538511603363137::1704614684::0::1::::<><>::res://Scripts/structures.gd<>uid://djdyp7jpngwa5::::res://Assets/Sprites/buildings.png<>uid://dowge51i5schn::::res://Scenes/interaction_area.tscn<>uid://3k3mwsvf3v2i::::res://Scenes/dialogue_box.tscn
 world.tscn::PackedScene::6468574644252440538::1704605748::0::1::::<><>::uid://bbyhc1ue2iq3m::::res://Assets/Sprites/terrain.png
-::res://Scripts/::1704611582
-credits_screen.gd::GDScript::-1::1704570164::0::1::::<>ColorRect<>::
+::res://Scripts/::1704615039
+book.gd::GDScript::-1::1704611582::0::1::::<>StaticBody2D<>::
+credits_screen (2).gd::GDScript::-1::1704570207::0::1::::<>ColorRect<>::
 dialogue_box.gd::GDScript::-1::1704569461::0::1::::<>CanvasLayer<>::
 dialogue_manager.gd::GDScript::-1::1704567854::0::1::::<>Node2D<>::
 input_checker.gd::GDScript::-1::1704526462::0::1::::<>Node2D<>::
@@ -39,7 +39,6 @@ interaction_manager.gd::GDScript::-1::1704611033::0::1::::<>Node2D<>::
 main.gd::GDScript::-1::1704610301::0::1::::<>Node2D<>::
 npc.gd::GDScript::-1::1704568417::0::1::::<>CharacterBody2D<>::
 options_screen.gd::GDScript::-1::1704569793::0::1::::<>ColorRect<>::
-player.gd::GDScript::-1::1704608151::0::1::::<>CharacterBody2D<>::
-book.gd::GDScript::-1::1704611582::0::1::::<>StaticBody2D<>::
+player.gd::GDScript::-1::1704615022::0::1::::<>CharacterBody2D<>::
 start_menu.gd::GDScript::-1::1704570102::0::1::::<>ColorRect<>::
 structures.gd::GDScript::-1::1704610493::0::1::::<>Node2D<>::

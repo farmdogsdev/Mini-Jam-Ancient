@@ -37,6 +37,8 @@ func _input(event):
 			can_interact = true
 		
 func _process(_delta):
+	if player == null:
+		player = get_tree().get_first_node_in_group("player")
 	if active_areas.size() > 0 && can_interact:
 		active_areas.sort_custom(_sort_by_distance_to_player)
 		label.text = _generate_label(input_check.get_current_input_type(), active_areas[0].action_name)

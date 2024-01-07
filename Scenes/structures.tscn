@@ -92,7 +92,7 @@ layer_0/tile_data = PackedInt32Array(3, 327680, 0, 65565, 0, 0, 720898, 327680, 
 action_name = "read"
 
 [node name="Statue" type="CollisionShape2D" parent="InteractionArea"]
-position = Vector2(1045, 471)
+position = Vector2(1057, 471)
 shape = SubResource("CapsuleShape2D_qn8sj")
 
 [node name="Label" type="Label" parent="."]

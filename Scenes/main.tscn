@@ -12,6 +12,7 @@ script = ExtResource("1_daygr")
 
 [node name="Entities" type="Node2D" parent="."]
 y_sort_enabled = true
+position = Vector2(-1, 0)
 
 [node name="Player" parent="Entities" instance=ExtResource("1_171el")]
 position = Vector2(114, 118)

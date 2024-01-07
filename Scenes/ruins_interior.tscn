@@ -1,0 +1,136 @@
+[gd_scene load_steps=10 format=3 uid="uid://68utx0t3p3mf"]
+
+[ext_resource type="Script" path="res://Scripts/ruins_interior.gd" id="1_4mct0"]
+[ext_resource type="Texture2D" uid="uid://frb8cdekvffc" path="res://Assets/Sprites/interior-tile.png" id="1_jdhy0"]
+[ext_resource type="Texture2D" uid="uid://fioet8art721" path="res://Assets/Sprites/light.png" id="2_863d3"]
+[ext_resource type="Texture2D" uid="uid://cvsvukhrnodm3" path="res://Assets/Sprites/interior-structures.png" id="2_qqc2w"]
+[ext_resource type="Texture2D" uid="uid://bj0gd4sm81sn2" path="res://Assets/Sprites/spot-light.png" id="3_dlqtv"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hjna2"]
+texture = ExtResource("1_jdhy0")
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, 8, 8, -0.875, -8, -0.75)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, -0.75, 8, -0.75, 8, -8)
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, 8, 8, 0, -8, -0.125)
+
+[sub_resource type="TileSet" id="TileSet_n2ek2"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_hjna2")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p610o"]
+texture = ExtResource("2_qqc2w")
+texture_region_size = Vector2i(64, 64)
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+0:0/0 = 0
+3:3/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_kfdal"]
+sources/0 = SubResource("TileSetAtlasSource_p610o")
+
+[node name="RuinsInterior" type="Node2D"]
+script = ExtResource("1_4mct0")
+
+[node name="Floor_Walls" type="TileMap" parent="."]
+texture_filter = 1
+scale = Vector2(7, 7)
+tile_set = SubResource("TileSet_n2ek2")
+format = 2
+layer_0/tile_data = PackedInt32Array(65536, 131072, 1610612737, 131072, 131072, 1610612737, 196608, 131072, 1610612736, 262144, 131072, 1610612737, 327680, 131072, 1610612737, 393216, 131072, 1610612737, 1, 131072, 1, 65537, 0, 1, 131073, 0, 1, 196609, 0, 1, 262145, 0, 1, 327681, 0, 1, 393217, 0, 1, 2, 131072, 1, 65538, 0, 1, 131074, 0, 1, 196610, 0, 1, 262146, 0, 1, 327682, 0, 1, 393218, 0, 1, 3, 131072, 0, 65539, 0, 1, 131075, 0, 1, 196611, 0, 1, 262147, 0, 1, 327683, 0, 1, 393219, 0, 1, 4, 131072, 1, 65540, 0, 1, 131076, 0, 1, 196612, 0, 1, 262148, 0, 1, 327684, 0, 1, 393220, 0, 1, 5, 131072, 1, 65541, 0, 1, 131077, 0, 1, 196613, 0, 1, 262149, 0, 1, 327685, 0, 1, 393221, 0, 1, 6, 131072, 1, 65542, 0, 1, 131078, 0, 1, 196614, 0, 1, 262150, 0, 1, 327686, 0, 1, 393222, 0, 1, 7, 131072, 1, 65543, 0, 1, 131079, 0, 1, 196615, 0, 1, 262151, 0, 1, 327687, 0, 1, 393223, 0, 1, 8, 131072, 0, 65544, 0, 1, 131080, 0, 1, 196616, 0, 1, 262152, 0, 1, 327688, 0, 1, 393224, 0, 1, 9, 131072, 1, 65545, 0, 1, 131081, 0, 1, 196617, 0, 1, 262153, 0, 1, 327689, 0, 1, 393225, 0, 1, 10, 131072, 1, 65546, 0, 1, 131082, 0, 1, 196618, 0, 1, 262154, 0, 1, 327690, 0, 1, 458753, 131072, 805306369, 458754, 131072, 805306369, 458755, 131072, 805306368, 458756, 131072, 805306369, 458757, 65536, 805306369, 458758, 65536, 805306369, 458759, 131072, 805306369, 458760, 131072, 805306368, 458761, 131072, 805306369, 393226, 0, 1, 458762, 131072, 805306369, 65547, 131072, 1342177281, 131083, 131072, 1342177281, 196619, 131072, 1342177280, 262155, 131072, 1342177281, 327691, 131072, 1342177281, 393227, 131072, 1342177281)
+
+[node name="Objects" type="TileMap" parent="."]
+texture_filter = 1
+scale = Vector2(4, 4)
+tile_set = SubResource("TileSet_kfdal")
+format = 2
+layer_0/tile_data = PackedInt32Array(1835049, 0, 0, 327690, 0, 0)
+
+[node name="PointLight2D" type="PointLight2D" parent="Objects"]
+visible = false
+position = Vector2(168.5, 87.75)
+scale = Vector2(4.79688, 4.96875)
+color = Color(0.509804, 1, 1, 1)
+energy = 0.71
+shadow_enabled = true
+texture = ExtResource("3_dlqtv")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.662745, 0.454902, 0.576471, 1)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(887, 116.75)
+scale = Vector2(5, 3.70313)
+energy = 0.42
+texture = ExtResource("2_863d3")
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(892, 772)
+rotation = -3.14137
+scale = Vector2(-5, 3.703)
+energy = 0.42
+texture = ExtResource("2_863d3")
+
+[node name="PointLight2D5" type="PointLight2D" parent="."]
+position = Vector2(324, 774)
+rotation = -3.14137
+scale = Vector2(-5, 3.703)
+energy = 0.42
+texture = ExtResource("2_863d3")
+
+[node name="PointLight2D6" type="PointLight2D" parent="."]
+position = Vector2(644, 773)
+rotation = -3.14137
+scale = Vector2(-9.30571, 7.6561)
+energy = 0.42
+texture = ExtResource("2_863d3")
+
+[node name="PointLight2D7" type="PointLight2D" parent="."]
+position = Vector2(704, 773)
+rotation = -3.14137
+scale = Vector2(9.306, 7.656)
+energy = 0.42
+texture = ExtResource("2_863d3")
+
+[node name="PointLight2D3" type="PointLight2D" parent="."]
+position = Vector2(323, 119)
+scale = Vector2(5, 3.70313)
+energy = 0.42
+texture = ExtResource("2_863d3")
+
+[node name="PointLight2D4" type="PointLight2D" parent="."]
+position = Vector2(1229, 329)
+rotation = 1.57079
+scale = Vector2(5, 3.70313)
+energy = 0.42
+texture = ExtResource("2_863d3")
+
+[node name="before-light" type="DirectionalLight2D" parent="."]
+color = Color(0.858824, 0.866667, 0.545098, 1)
+energy = 0.28
+shadow_color = Color(0.160784, 0.329412, 0.486275, 0.333333)
+
+[node name="after-light" type="DirectionalLight2D" parent="."]
+visible = false
+color = Color(0.278431, 0.733333, 0.498039, 1)
+energy = 1.58
+shadow_color = Color(0.160784, 0.329412, 0.486275, 0.333333)

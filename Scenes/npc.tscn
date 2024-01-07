@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dkseu0v2254ei"]
+[gd_scene load_steps=8 format=3 uid="uid://dkseu0v2254ei"]
 
 [ext_resource type="Script" path="res://Scripts/npc.gd" id="1_l88sf"]
 [ext_resource type="Texture2D" uid="uid://yijhukm04fd6" path="res://Assets/Sprites/npc1.png" id="2_3tkfg"]
@@ -11,6 +11,9 @@ height = 12.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ckvav"]
 radius = 12.0
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xcnwe"]
+polygon = PackedVector2Array(-3.5, -2.25, 3.25, -2.25, 2.75, 0, -3, 0)
 
 [node name="NPC" type="CharacterBody2D"]
 scale = Vector2(4, 4)
@@ -47,3 +50,6 @@ vertical_alignment = 1
 
 [node name="DialogueBox" parent="." instance=ExtResource("4_ovk4p")]
 visible = false
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_xcnwe")

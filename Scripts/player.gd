@@ -3,13 +3,17 @@ extends CharacterBody2D
 
 var tile_size = 64
 var screen_size
-var speed = 400
+@export var speed = 350
 var moving = false
+var is_interacting = false
 
 func _ready():
 	screen_size = Vector2(32.5*tile_size,15*tile_size)
 	position = Vector2(160, 230)
 			
+
+func interior_position():
+	position = Vector2(6*112, 7*112)
 
 func get_input():
 	velocity = Vector2()
@@ -25,5 +29,6 @@ func get_input():
 	
 func _physics_process(_delta):
 	get_input()
-	move_and_slide()
-	position = position.clamp(Vector2.ZERO, screen_size)
+	if !is_interacting:
+		move_and_slide()
+		position = position.clamp(Vector2.ZERO, screen_size)

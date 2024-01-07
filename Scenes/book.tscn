@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bbdk68t8vejr3"]
+[gd_scene load_steps=8 format=3 uid="uid://bbdk68t8vejr3"]
 
 [ext_resource type="Texture2D" uid="uid://cdtpw0ywxer64" path="res://Assets/Sprites/book.png" id="1_ptu5e"]
 [ext_resource type="Script" path="res://Scripts/book.gd" id="1_s1615"]
@@ -10,6 +10,9 @@ radius = 1.92592
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_idrjs"]
 radius = 13.0384
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_hytf3"]
+polygon = PackedVector2Array(-7, -3, 1, -4, 8, 1, 2, 6)
 
 [node name="Book" type="StaticBody2D"]
 texture_filter = 1
@@ -47,3 +50,6 @@ vertical_alignment = 1
 
 [node name="DialogueBox" parent="." instance=ExtResource("3_88sts")]
 visible = false
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_hytf3")

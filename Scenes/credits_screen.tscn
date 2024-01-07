@@ -74,7 +74,7 @@ scale = Vector2(0.849068, 1.47742)
 theme_override_colors/default_color = Color(0.129412, 0.145098, 0.160784, 1)
 theme_override_font_sizes/normal_font_size = 45
 bbcode_enabled = true
-text = "[center]Writing - DoctorNarwhal
+text = "[center]Writing & Scenario - DoctorNarwhal
 Programming & Art - farmdogs
 Sound Design - jakethehumanjr
 "

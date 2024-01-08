@@ -50,12 +50,12 @@
   {
 	"id": "Structures",
 	"character": "Statue",
-	"text": "Within the locked keep, the Gaia Engine lives, forever humming its alien tune, restoring the world to life everlasting. Approach, and speak these words, and be allowed the gift of basking in the presence of the Gaia Engine. [i]Allow my entry, Tower of Genesis, and recognize me as the Architect of Solarae’s new world.[/i]"
+	"text": "Within the locked keep, the Gaia Engine lives, forever humming its alien tune, restoring the world to life everlasting. Approach, and speak these words, and be allowed the gift of basking in the presence of the Gaia Engine. \"Allow my entry, Tower of Genesis, and recognize me as the Architect of Solarae’s new world.\""
   },
   {
 	"id": "InteriorStructures",
 	"character": "Strange Machine",
-	"text": "The alien machine in front of you hums with energy, a melodious tune filling the tower with the Gaia Engine as its source. It's almost as if this contraption is [i]alive.[/i]"
+	"text": "The alien machine in front of you hums with energy, a melodious tune filling the tower with the Gaia Engine as its source. It's almost as if this contraption is ALIVE."
   },
   {
 	"id": "InteriorStructures",

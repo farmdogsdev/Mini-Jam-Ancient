@@ -14,6 +14,9 @@ func _ready():
 
 func interior_position():
 	position = Vector2(6*112, 7*112)
+	
+func end_position():
+	position = Vector2(612, 364)
 
 func get_input():
 	velocity = Vector2()

@@ -1,0 +1,107 @@
+[gd_scene load_steps=9 format=3 uid="uid://ct1ygyy7vpw6s"]
+
+[ext_resource type="Script" path="res://Scripts/controls_screen.gd" id="1_w0jjk"]
+[ext_resource type="Texture2D" uid="uid://bbyhc1ue2iq3m" path="res://Assets/Sprites/terrain.png" id="2_k32as"]
+[ext_resource type="FontFile" uid="uid://dpxymw7tfv6v0" path="res://Assets/Fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="3_ncdek"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x1710"]
+texture = ExtResource("2_k32as")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ic4jp"]
+sources/0 = SubResource("TileSetAtlasSource_x1710")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_chs42"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jinq8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6msdw"]
+
+[node name="ControlsScreen" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.85098, 0.717647, 0.494118, 1)
+script = ExtResource("1_w0jjk")
+
+[node name="TileMap" type="TileMap" parent="."]
+texture_filter = 1
+scale = Vector2(5, 5)
+tile_set = SubResource("TileSet_ic4jp")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 0, 131072, 0, 0, 196608, 0, 0, 262144, 0, 0, 327680, 0, 0, 393216, 0, 0, 458752, 0, 0, 1, 0, 0, 65537, 0, 0, 131073, 0, 0, 196609, 0, 0, 262145, 0, 0, 327681, 0, 0, 393217, 0, 0, 458753, 0, 0, 2, 0, 0, 65538, 0, 0, 131074, 0, 0, 196610, 0, 0, 262146, 0, 0, 327682, 0, 0, 393218, 0, 0, 458754, 0, 0, 3, 0, 0, 65539, 0, 0, 131075, 0, 0, 196611, 0, 0, 262147, 0, 0, 327683, 0, 0, 393219, 0, 0, 458755, 0, 0, 4, 0, 0, 65540, 0, 0, 131076, 0, 0, 196612, 0, 0, 262148, 0, 0, 327684, 0, 0, 393220, 0, 0, 458756, 0, 0, 5, 0, 0, 65541, 0, 0, 131077, 0, 0, 196613, 0, 0, 262149, 0, 0, 327685, 0, 0, 393221, 0, 0, 458757, 0, 0, 6, 0, 0, 65542, 0, 0, 131078, 0, 0, 196614, 0, 0, 262150, 0, 0, 327686, 0, 0, 393222, 0, 0, 458758, 0, 0, 7, 0, 0, 65543, 0, 0, 131079, 0, 0, 196615, 0, 0, 262151, 0, 0, 327687, 0, 0, 393223, 0, 0, 458759, 0, 0, 8, 0, 0, 65544, 0, 0, 131080, 0, 0, 196616, 0, 0, 262152, 0, 0, 327688, 0, 0, 393224, 0, 0, 458760, 0, 0, 9, 0, 0, 65545, 0, 0, 131081, 0, 0, 196617, 0, 0, 262153, 0, 0, 327689, 0, 0, 393225, 0, 0, 458761, 0, 0, 10, 0, 0, 65546, 0, 0, 131082, 0, 0, 196618, 0, 0, 262154, 0, 0, 327690, 0, 0, 393226, 0, 0, 458762, 0, 0, 11, 0, 0, 65547, 0, 0, 131083, 0, 0, 196619, 0, 0, 262155, 0, 0, 327691, 0, 0, 393227, 0, 0, 458763, 0, 0, 12, 0, 0, 65548, 0, 0, 131084, 0, 0, 196620, 0, 0, 262156, 0, 0, 327692, 0, 0, 393228, 0, 0, 458764, 0, 0, 13, 0, 0, 65549, 0, 0, 131085, 0, 0, 196621, 0, 0, 262157, 0, 0, 327693, 0, 0, 393229, 0, 0, 458765, 0, 0, 14, 0, 0, 65550, 0, 0, 131086, 0, 0, 196622, 0, 0, 262158, 0, 0, 327694, 0, 0, 393230, 0, 0, 458766, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -332.5
+offset_top = 6.0
+offset_right = 332.5
+offset_bottom = 101.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.129412, 0.145098, 0.160784, 1)
+theme_override_fonts/font = ExtResource("3_ncdek")
+theme_override_font_sizes/font_size = 95
+text = "Controls"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+texture_filter = 1
+custom_minimum_size = Vector2(1000, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -372.0
+offset_top = -108.0
+offset_right = 628.0
+offset_bottom = 92.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.000984363
+scale = Vector2(0.849068, 1.47742)
+theme_override_colors/default_color = Color(0.129412, 0.145098, 0.160784, 1)
+theme_override_fonts/normal_font = ExtResource("3_ncdek")
+theme_override_font_sizes/normal_font_size = 35
+bbcode_enabled = true
+text = "Movement - WASD or Arrow Keys
+Interact - E"
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = -90.0
+offset_right = 75.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.129412, 0.145098, 0.160784, 1)
+theme_override_fonts/font = ExtResource("3_ncdek")
+theme_override_font_sizes/font_size = 65
+theme_override_styles/normal = SubResource("StyleBoxEmpty_chs42")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jinq8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6msdw")
+text = "Play"
+
+[connection signal="pressed" from="Play" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

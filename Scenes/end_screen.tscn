@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://71hfwwrhtdlq"]
+[gd_scene load_steps=10 format=3 uid="uid://71hfwwrhtdlq"]
 
 [ext_resource type="PackedScene" uid="uid://3k3mwsvf3v2i" path="res://Scenes/dialogue_box.tscn" id="1_f5xnb"]
 [ext_resource type="Script" path="res://Scripts/end_screen.gd" id="1_nbpa6"]
 [ext_resource type="Texture2D" uid="uid://cvsvukhrnodm3" path="res://Assets/Sprites/interior-structures.png" id="2_55bww"]
 [ext_resource type="Texture2D" uid="uid://bj0gd4sm81sn2" path="res://Assets/Sprites/spot-light.png" id="3_pw3pb"]
 [ext_resource type="FontFile" uid="uid://dpxymw7tfv6v0" path="res://Assets/Fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="5_wlbf4"]
+[ext_resource type="PackedScene" uid="uid://dowge51i5schn" path="res://Scenes/interaction_area.tscn" id="6_evdo8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p610o"]
 texture = ExtResource("2_55bww")
@@ -29,6 +30,10 @@ texture_region_size = Vector2i(64, 64)
 [sub_resource type="TileSet" id="TileSet_xgsy2"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_p610o")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5cq7u"]
+radius = 74.0
+height = 192.0
 
 [node name="EndScreen" type="Node2D"]
 script = ExtResource("1_nbpa6")
@@ -85,3 +90,11 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("5_wlbf4")
 theme_override_font_sizes/font_size = 125
 text = "The End"
+
+[node name="MachineArea" parent="." instance=ExtResource("6_evdo8")]
+action_name = "read next"
+character_name = "Strange Machine"
+
+[node name="Machine" type="CollisionShape2D" parent="MachineArea"]
+position = Vector2(608, 318)
+shape = SubResource("CapsuleShape2D_5cq7u")

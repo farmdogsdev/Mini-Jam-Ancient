@@ -19,8 +19,9 @@ func _ready():
 	table2.interact = Callable(self, "_on_table2_interact") #12
 
 func _on_machine_interact():
+	box.update_name("Strange Machine")
 	if first_machine:
-		machine.action_name = "destroy"
+		
 		machine_destroyed = true
 	if machine_destroyed:
 		# go to end scene
@@ -30,12 +31,15 @@ func _on_machine_interact():
 		box.visible = !box.visible
 		box.update_dialogue(dialogue_manager.dialogue[10]["text"])
 		first_machine = true
+		machine.action_name = "destroy"
 
 func _on_table1_interact():
+	box.update_name("Table")
 	box.visible = !box.visible
 	box.update_dialogue(dialogue_manager.dialogue[11]["text"])
 	
 func _on_table2_interact():
+	box.update_name("Table")
 	box.visible = !box.visible
 	box.update_dialogue(dialogue_manager.dialogue[12]["text"])
 

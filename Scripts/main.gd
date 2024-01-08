@@ -30,6 +30,8 @@ func change_stage():
 func end_game():
 	$".".add_child(end_screen.instantiate())
 	_move_node(player, $EndScreen)
+	player.end_position()
+	$EndScreen/Player/OutsideTheme.stop()
 	$RuinsInterior.queue_free()
 
 func _input(_event):

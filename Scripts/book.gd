@@ -4,6 +4,7 @@ extends StaticBody2D
 @onready var interaction_area : InteractionArea = $InteractionArea
 @onready var label = $Label
 @onready var box = $DialogueBox
+@onready var dialogue_manager = get_node("/root/DialogueManager")
 
 var book_read = false
 
@@ -12,7 +13,12 @@ func _ready():
 
 func _on_interact():
 	box.visible = !box.visible
-	#this is where dialogue will go
+	if character_name == "Book 1":
+		box.update_dialogue(dialogue_manager.dialogue[0]["text"])
+	if character_name == "Book 2":
+		box.update_dialogue(dialogue_manager.dialogue[1]["text"])
+	if character_name == "Book 3":
+		box.update_dialogue(dialogue_manager.dialogue[2]["text"])
 	book_read = true
 	print(character_name + " is now read")
 

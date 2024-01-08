@@ -1,0 +1,89 @@
+[gd_scene load_steps=9 format=3 uid="uid://c4a1grueacysc"]
+
+[ext_resource type="PackedScene" uid="uid://b7dgstfethxbh" path="res://Scenes/player.tscn" id="1_171el"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_daygr"]
+[ext_resource type="PackedScene" uid="uid://cyfoqkdg5884u" path="res://Scenes/world.tscn" id="2_5vikh"]
+[ext_resource type="Texture2D" uid="uid://bbyhc1ue2iq3m" path="res://Assets/Sprites/terrain.png" id="3_8life"]
+[ext_resource type="PackedScene" uid="uid://dkseu0v2254ei" path="res://Scenes/npc.tscn" id="3_h5om7"]
+[ext_resource type="PackedScene" uid="uid://cn6ur8wuwuy0p" path="res://Scenes/structures.tscn" id="4_02h8q"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_liw1i"]
+texture = ExtResource("3_8life")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_amtyu"]
+sources/0 = SubResource("TileSetAtlasSource_liw1i")
+
+[node name="Main" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_daygr")
+
+[node name="World" parent="." instance=ExtResource("2_5vikh")]
+
+[node name="Paths" type="Node2D" parent="World"]
+
+[node name="TileMap" type="TileMap" parent="World/Paths"]
+texture_filter = 1
+scale = Vector2(4, 4)
+tile_set = SubResource("TileSet_amtyu")
+format = 2
+layer_0/tile_data = PackedInt32Array(524304, 196608, 0, 589840, 65536, 0, 655376, 65536, 0, 720912, 65536, 0, 786448, 65536, 0, 851984, 65536, 0, 917520, 65536, 0, 983056, 65536, 0, 524303, 65536, 1, 524302, 65536, 1, 524301, 0, 2, 524300, 65536, 1, 524299, 65536, 1, 524298, 65536, 1, 524297, 65536, 1, 524296, 196608, 1, 524295, 65536, 1, 524294, 65536, 1, 524293, 65536, 1, 524292, 65536, 1, 524291, 65536, 1, 524290, 0, 1, 524305, 65536, 1, 524306, 65536, 1, 524307, 0, 2, 524308, 65536, 1, 524309, 65536, 1, 524310, 65536, 1, 524311, 65536, 1, 524312, 65536, 1, 524313, 65536, 1, 524314, 65536, 1, 524315, 65536, 1, 524316, 65536, 1, 524317, 131072, 1, 262173, 65536, 0, 327709, 65536, 0, 393245, 65536, 0, 458781, 65536, 0, 327693, 65536, 0, 393229, 65536, 0, 458765, 65536, 0, 327699, 65536, 0, 393235, 65536, 0, 458771, 65536, 0, 262163, 131072, 2, 262157, 196608, 2, 262158, 65536, 1, 262159, 65536, 1, 262160, 0, 2, 262161, 65536, 1, 262162, 65536, 1, 16, 65536, 0, 65552, 65536, 0, 131088, 65536, 0, 196624, 65536, 0, 458768, 65536, 0, 196610, 131072, 2, 262146, 65536, 0, 327682, 65536, 0, 393218, 65536, 0, 458754, 65536, 0, 196637, 65536, 0, 851976, 65536, 0, 917512, 0, 2, 917513, 65536, 1, 917511, 65536, 1, 917510, 0, 1, 917514, 65536, 2, 720906, 65536, 0, 786442, 65536, 0, 851978, 65536, 0, 720902, 65536, 0, 786438, 65536, 0, 851974, 65536, 0, 655366, 196608, 2, 655370, 131072, 2, 655367, 65536, 1, 655368, 0, 2, 655369, 65536, 1, 589832, 65536, 0, 589853, 65536, 0, 655389, 65536, 0, 720925, 0, 2, 720926, 65536, 1, 720927, 65536, 1, 720924, 65536, 1, 720923, 65536, 1, 720922, 196608, 2, 720928, 131072, 2, 786464, 65536, 0, 852000, 65536, 0, 917536, 65536, 0, 786458, 65536, 0, 851994, 65536, 0, 917530, 65536, 0, 983066, 0, 1, 983072, 65536, 2, 983071, 65536, 1, 983070, 65536, 1, 983069, 65536, 1, 983068, 65536, 1, 983067, 65536, 1, 196609, 65536, 1, 196608, 65536, 1)
+
+[node name="Entities" type="Node2D" parent="World"]
+y_sort_enabled = true
+position = Vector2(-1, 0)
+
+[node name="Player" parent="World/Entities" instance=ExtResource("1_171el")]
+y_sort_enabled = false
+position = Vector2(160, 230)
+speed = 340
+
+[node name="Camera2D" type="Camera2D" parent="World/Entities/Player"]
+limit_left = 0
+limit_top = -256
+limit_right = 2112
+limit_bottom = 970
+
+[node name="Structures" parent="World/Entities" instance=ExtResource("4_02h8q")]
+
+[node name="NPC" parent="World/Entities" instance=ExtResource("3_h5om7")]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(355, 480)
+character_name = "Manager"
+
+[node name="Researcher1" parent="World/Entities" instance=ExtResource("3_h5om7")]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(625, 870)
+
+[node name="Researcher2" parent="World/Entities" instance=ExtResource("3_h5om7")]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(1754, 669)
+
+[node name="Researcher3" parent="World/Entities" instance=ExtResource("3_h5om7")]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(1833, 233)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="World"]
+color = Color(0.921569, 0.827451, 0.847059, 1)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="World"]
+rotation = 0.380482
+color = Color(0.988235, 0.913725, 0.635294, 1)
+energy = 0.28
+shadow_enabled = true
+shadow_color = Color(0.160784, 0.329412, 0.486275, 0.333333)

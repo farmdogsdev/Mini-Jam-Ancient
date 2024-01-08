@@ -13,3 +13,11 @@ res://Scenes/credits_screen.tscn
 res://Scenes/book.tscn
 res://Scripts/book.gd
 res://Scripts/interaction_manager.gd
+res://Scripts/dialogue_manager.gd
+res://Assets/Dialogue/Gaia Dialogue.json
+res://Assets/Dialogue/Gaia-Dialogue.json
+res://Scripts/npc.gd
+res://Scripts/dialogue_box.gd
+res://Scripts/ruins_interior.gd
+res://Scripts/interaction_area.gd
+res://Scenes/end_screen.tscn

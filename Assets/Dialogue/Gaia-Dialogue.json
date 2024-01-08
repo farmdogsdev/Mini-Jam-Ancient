@@ -1,0 +1,85 @@
+[
+  {
+	"id": "Book",
+	"character": "Book1",
+	"text": "Our universe's Architect delivered unto us a most amiable gift this day. A shining star, dropped from the cradle of the sky. This star contained a crystal, a remarkable specimen, untold power contained within. The repository this crystal was contained within seems to be made of material unknown to our world, able to be shaped and molded to harness this crystal’s energies. I will use this. I will save Solarae.",
+	"add": "book_read"
+  },
+  {
+	"id": "Book",
+	"character": "Book2",
+	"text": "It is completed. I call it the Gaia Engine. It will return our world from ruin. I have stared the Architect in the eyes and struck its image down in my name. I am the Architect now, and the Gaia Engine is my toolkit. I am the only being that can salvage this empire. Solarae will be reborn. We all will.",
+	"add": "book_read"
+  },
+  {
+	"id": "Book",
+	"character": "Book3",
+	"text": "The world is crumbling. I cannot turn off the Gaia Engine. It brought verdant forests and bountiful harvests for a time. The animals grazed in seas of green, the birds flocked in skies of blue. The drought was lifted, plentiful rains fell and revitalized our lands as we deserved. Our cities expanded, our technology grew, our race FLOURISHED. This world was mine. This wasn’t supposed to happen. This cannot be how it ends. No, no, no. I will not let this be our end. I am the Architect of our design! I am GOD.",
+	"add": "book_read"
+  },
+  {
+	"id": "NPC",
+	"character": "Manager",
+	"text": "You’re finally here! Being late to your first dig isn’t a great look, but I’ll give you the benefit of the doubt. Go talk to my associates and see what you might assist them with!"
+  },
+  {
+	"id": "NPC",
+	"character": "Researcher1",
+	"text": "Another bright mind looking to assist our archaeological dig? Wonderful! Part of what you’ll need is contained within this book. Go see the others for the remaining pieces."
+  },
+  {
+	"id": "NPC",
+	"character": "Researcher2",
+	"text": "Maybe a fresh pair of eyes can make a difference in unlocking these ancient ruins. The three of us can’t seem to figure out the connection between these books and this statue. Take this book, you may have what it takes to decipher the runes."
+  },
+  {
+	"id": "NPC",
+	"character": "Researcher3",
+	"text": "Blasted ancient hieroglyphs… nothing I do seems to work! I can’t even translate these runes! I’ve spent 72 years researching this dig site, and not a single new discovery has been made! I threw my book into the sand over there. If you can dig it out, feel free to attempt to translate it, not that someone as new as you could get that done."
+  },
+  {
+	"id": "Structures",
+	"character": "Door",
+	"text": "The door to this ancient tower is locked tight. You hear a strange humming emanating from within. Someone or something inside is… singing?"
+  },
+  {
+	"id": "Structures",
+	"character": "Statue",
+	"text": "The runes in front of you are not readable without a translation."
+  },
+  {
+	"id": "Structures",
+	"character": "Statue",
+	"text": "Within the locked keep, the Gaia Engine lives, forever humming its alien tune, restoring the world to life everlasting. Approach, and speak these words, and be allowed the gift of basking in the presence of the Gaia Engine. [i]Allow my entry, Tower of Genesis, and recognize me as the Architect of Solarae’s new world.[/i]"
+  },
+  {
+	"id": "InteriorStructures",
+	"character": "Strange Machine",
+	"text": "The alien machine in front of you hums with energy, a melodious tune filling the tower with the Gaia Engine as its source. It's almost as if this contraption is [i]alive.[/i]"
+  },
+  {
+	"id": "InteriorStructures",
+	"character": "Table",
+	"text": "There are odd tools and devices placed on this table, as well as incomplete machinery that appear to be the beginning of smaller iterations of the pedestal the Gaia Engine’s crystal rests upon. Due to an unknown series of events, these smaller engines were never completed."
+  },
+  {
+	"id": "InteriorStructures",
+	"character": "Table",
+	"text": "The table in front of you has various chunks of foreign metal and strange electronics strewn across it. The pieces bear a strange resemblance to the Gaia Engine’s make up, although these parts seem defunct and unusable."
+  },
+  {
+	"id": "InteriorStructures",
+	"character": "Disabled Engine",
+	"text": "As you tinker with the Gaia Engine’s internals, you pull a plug that is pulsing with the same green energy filling the crystal. With a sound akin to a shriek of pain, the energy within the crystal pulses outward, the crystal shattering into pieces as its lifeforce forcibly leaves its interior."
+  },
+  {
+	"id": "InteriorStructures",
+	"character": "Disabled Engine",
+	"text": "Around you, green grass sprouts from the cracks in the floor, vines climb their way up the walls, and even the air itself feels fresh. This Gaia Engine, whatever it was, was created to salvage a world lost to drought… and it did, for a time."
+  },
+  {
+	"id": "InteriorStructures",
+	"character": "Disabled Engine",
+	"text": "In the end, it giveth, yet also taketh away, proof that no mortal soul is worthy of taking up the mantle of a god. You’ve bandaged a deep wound on this world, and even if it scars, it will plague these lands no longer. You are no god, you are simply a savior."
+  }
+]

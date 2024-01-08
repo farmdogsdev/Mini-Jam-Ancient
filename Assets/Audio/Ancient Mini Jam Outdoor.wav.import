@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://p5djhwxq3gc4"
+path="res://.godot/imported/Ancient Mini Jam Outdoor.wav-d73eadb162af14005843a6007ad5cc24.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Ancient Mini Jam Outdoor.wav"
+dest_files=["res://.godot/imported/Ancient Mini Jam Outdoor.wav-d73eadb162af14005843a6007ad5cc24.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -61,21 +61,25 @@ limit_bottom = 970
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(355, 480)
+character_name = "Manager"
 
 [node name="Researcher1" parent="World/Entities" instance=ExtResource("3_h5om7")]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(625, 870)
+character_name = "Friendly Researcher"
 
 [node name="Researcher2" parent="World/Entities" instance=ExtResource("3_h5om7")]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(1754, 669)
+character_name = "Hopeful Researcher"
 
 [node name="Researcher3" parent="World/Entities" instance=ExtResource("3_h5om7")]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(1833, 233)
+character_name = "Angry Researcher"
 
 [node name="CanvasModulate" type="CanvasModulate" parent="World"]
 color = Color(0.921569, 0.827451, 0.847059, 1)

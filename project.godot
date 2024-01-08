@@ -19,6 +19,7 @@ config/icon="res://Assets/Sprites/icon.svg"
 
 InteractionManager="*res://Scenes/interaction_manager.tscn"
 InputChecker="*res://Scenes/input_checker.tscn"
+DialogueManager="*res://Scenes/dialogue_manager.tscn"
 
 [importer_defaults]
 

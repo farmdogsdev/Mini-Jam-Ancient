@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cn6ur8wuwuy0p"]
+[gd_scene load_steps=22 format=3 uid="uid://cn6ur8wuwuy0p"]
 
 [ext_resource type="Script" path="res://Scripts/structures.gd" id="1_dtutl"]
 [ext_resource type="Texture2D" uid="uid://djdyp7jpngwa5" path="res://Assets/Sprites/buildings.png" id="1_xy2ix"]
@@ -21,6 +21,9 @@ polygon = PackedVector2Array(-13.5, 31.5, 0.5, 32.5, 17.5, 31, 15.5564, 26.5165,
 polygon = PackedVector2Array(-21, 24, 32.5, 24, 31.8198, 13.7886, -21.5668, 13.435)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_duos8"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_myy1d"]
+polygon = PackedVector2Array(-33.9411, 22.6274, 20.5061, 23.3345, 19.0919, 12.7279, -33.234, 13.435)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_i8ouc"]
 polygon = PackedVector2Array(-24.0416, 29.6985, 18.7383, 30.4056, 25.4558, 28.9914, 25.8094, 23.6881, -25.8094, 24.3952)
@@ -98,6 +101,7 @@ texture_region_size = Vector2i(64, 64)
 3:0/0/physics_layer_0/angular_velocity = 0.0
 3:1/0 = 0
 3:1/0/y_sort_origin = 6
+3:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_myy1d")
 3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:1/0/physics_layer_0/angular_velocity = 0.0
 3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-31.5, 0.5, -32.1734, 24.7487, 19.799, 23.6881, 20.5, 0.5)
@@ -130,7 +134,7 @@ sources/0 = SubResource("TileSetAtlasSource_o2h3i")
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qn8sj"]
 radius = 59.0
-height = 142.0
+height = 152.0
 
 [node name="Structures" type="Node2D"]
 y_sort_enabled = true
@@ -152,6 +156,7 @@ layer_0/tile_data = PackedInt32Array(3, 327680, 0, 65565, 0, 0, 720898, 327680, 
 
 [node name="StatueArea" parent="." instance=ExtResource("3_wksfh")]
 action_name = "read"
+character_name = "Statue"
 
 [node name="Statue" type="CollisionShape2D" parent="StatueArea"]
 position = Vector2(1057, 471)
@@ -159,9 +164,10 @@ shape = SubResource("CapsuleShape2D_qn8sj")
 
 [node name="DoorArea" parent="." instance=ExtResource("3_wksfh")]
 action_name = "inspect"
+character_name = "Door"
 
 [node name="RuinsDoor" type="CollisionShape2D" parent="DoorArea"]
-position = Vector2(1058, -27)
+position = Vector2(1058, -11)
 shape = SubResource("CapsuleShape2D_qn8sj")
 
 [node name="Label" type="Label" parent="."]
@@ -183,14 +189,14 @@ visible = false
 [node name="Book1" parent="." instance=ExtResource("5_cvsbx")]
 position = Vector2(358, 943)
 scale = Vector2(3, 3)
-character_name = "Book1"
+character_name = "Book 1"
 
 [node name="Book2" parent="." instance=ExtResource("5_cvsbx")]
 position = Vector2(1834, 647)
 scale = Vector2(3, 3)
-character_name = "Book2"
+character_name = "Book 2"
 
 [node name="Book3" parent="." instance=ExtResource("5_cvsbx")]
 position = Vector2(2052, 207)
 scale = Vector2(3, 3)
-character_name = "Book3"
+character_name = "Book 3"

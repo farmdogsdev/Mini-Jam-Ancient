@@ -1,0 +1,68 @@
+[gd_scene load_steps=6 format=3 uid="uid://71hfwwrhtdlq"]
+
+[ext_resource type="PackedScene" uid="uid://3k3mwsvf3v2i" path="res://Scenes/dialogue_box.tscn" id="1_f5xnb"]
+[ext_resource type="Texture2D" uid="uid://cvsvukhrnodm3" path="res://Assets/Sprites/interior-structures.png" id="2_55bww"]
+[ext_resource type="Texture2D" uid="uid://bj0gd4sm81sn2" path="res://Assets/Sprites/spot-light.png" id="3_pw3pb"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p610o"]
+texture = ExtResource("2_55bww")
+texture_region_size = Vector2i(64, 64)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12.7279, 30.4056, 14.1421, 31.1127, 12.3744, 18.0312, -12.3744, 18.7383)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-13, 32, 14, 32, 12, 20.5, -13, 19.5)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12.3744, -28.6378, -11.6673, 21.5668, 13.435, 21.9203, 12.3744, -27.9307)
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-11.5, 22.5, 13.5, 22, 12.3744, -26.5165, -13, -27)
+
+[sub_resource type="TileSet" id="TileSet_xgsy2"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_p610o")
+
+[node name="EndScreen" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1425.0
+offset_bottom = 822.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+visible = false
+z_index = 5
+texture_filter = 1
+offset_left = 1037.0
+offset_top = 326.0
+offset_right = 1077.0
+offset_bottom = 349.0
+theme_override_font_sizes/font_size = 15
+text = "test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DialogueBox" parent="." instance=ExtResource("1_f5xnb")]
+visible = false
+
+[node name="Objects" type="TileMap" parent="."]
+y_sort_enabled = true
+texture_filter = 1
+scale = Vector2(4, 4)
+tile_set = SubResource("TileSet_xgsy2")
+format = 2
+layer_0/tile_data = PackedInt32Array(1835049, 0, 0, 327690, 65536, 0)
+
+[node name="PointLight2D" type="PointLight2D" parent="Objects"]
+position = Vector2(168.5, 87.75)
+scale = Vector2(4.79688, 4.96875)
+color = Color(0.509804, 1, 1, 1)
+energy = 0.71
+shadow_enabled = true
+texture = ExtResource("3_pw3pb")

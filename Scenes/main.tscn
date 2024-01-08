@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c4a1grueacysc"]
+[gd_scene load_steps=11 format=3 uid="uid://c4a1grueacysc"]
 
 [ext_resource type="PackedScene" uid="uid://b7dgstfethxbh" path="res://Scenes/player.tscn" id="1_171el"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_daygr"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://bbyhc1ue2iq3m" path="res://Assets/Sprites/terrain.png" id="3_8life"]
 [ext_resource type="PackedScene" uid="uid://dkseu0v2254ei" path="res://Scenes/npc.tscn" id="3_h5om7"]
 [ext_resource type="PackedScene" uid="uid://cn6ur8wuwuy0p" path="res://Scenes/structures.tscn" id="4_02h8q"]
+[ext_resource type="AudioStream" uid="uid://p5djhwxq3gc4" path="res://Assets/Audio/Ancient Mini Jam Outdoor.wav" id="7_v3cny"]
+[ext_resource type="AudioStream" uid="uid://c11an6h6hemcn" path="res://Assets/Audio/Ancient Mini Jam Indoor.wav" id="8_gg15b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_liw1i"]
 texture = ExtResource("3_8life")
@@ -54,6 +56,17 @@ limit_left = 0
 limit_top = -256
 limit_right = 2112
 limit_bottom = 970
+
+[node name="OutsideTheme" type="AudioStreamPlayer2D" parent="World/Entities/Player"]
+position = Vector2(-39.75, -57.5)
+scale = Vector2(0.25, 0.25)
+stream = ExtResource("7_v3cny")
+autoplay = true
+
+[node name="InsideTheme" type="AudioStreamPlayer2D" parent="World/Entities/Player"]
+position = Vector2(-39.75, -57.5)
+scale = Vector2(0.25, 0.25)
+stream = ExtResource("8_gg15b")
 
 [node name="Structures" parent="World/Entities" instance=ExtResource("4_02h8q")]
 

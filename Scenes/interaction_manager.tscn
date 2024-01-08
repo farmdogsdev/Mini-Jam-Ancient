@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://6cx85l0y0vun"]
+[gd_scene load_steps=3 format=3 uid="uid://6cx85l0y0vun"]
 
 [ext_resource type="Script" path="res://Scripts/interaction_manager.gd" id="1_2i4bx"]
+[ext_resource type="FontFile" uid="uid://dpxymw7tfv6v0" path="res://Assets/Fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="2_q1x66"]
 
 [node name="InteractionManager" type="Node2D"]
 script = ExtResource("1_2i4bx")
@@ -23,7 +24,8 @@ size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 5
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("2_q1x66")
+theme_override_font_sizes/font_size = 25
 text = "!"
 horizontal_alignment = 1
 vertical_alignment = 1

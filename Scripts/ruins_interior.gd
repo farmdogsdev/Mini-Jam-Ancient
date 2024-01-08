@@ -23,16 +23,9 @@ func _on_machine_interact():
 		machine.action_name = "destroy"
 		machine_destroyed = true
 	if machine_destroyed:
-		machine.character_name = "Disabled Engine"
-		box.visible = true
-		if machine_text == 0:
-			box.update_dialogue(dialogue_manager.dialogue[13]["text"])
-			machine_text += 1
-		if machine_text == 1:
-			box.update_dialogue(dialogue_manager.dialogue[14]["text"])
-			machine_text += 1
-		if machine_text == 2:
-			box.update_dialogue(dialogue_manager.dialogue[15]["text"])
+		# go to end scene
+		var main = get_parent()
+		main.end_game()
 	else:
 		box.visible = !box.visible
 		box.update_dialogue(dialogue_manager.dialogue[10]["text"])

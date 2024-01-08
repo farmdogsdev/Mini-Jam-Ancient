@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://byh8g73txoff"]
 
 [ext_resource type="Script" path="res://Scripts/start_menu.gd" id="1_1jfid"]
-[ext_resource type="PackedScene" uid="uid://bm312imnvjsvw" path="res://Scenes/options_screen.tscn" id="2_8qdjv"]
 [ext_resource type="Texture2D" uid="uid://bbyhc1ue2iq3m" path="res://Assets/Sprites/terrain.png" id="2_fh4dx"]
+[ext_resource type="FontFile" uid="uid://dpxymw7tfv6v0" path="res://Assets/Fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="3_7vm6x"]
 [ext_resource type="PackedScene" uid="uid://idy41opmu163" path="res://Scenes/credits_screen.tscn" id="3_lekgj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kmdi7"]
@@ -53,8 +53,10 @@ offset_bottom = 151.0
 theme_override_colors/font_color = Color(0.129412, 0.145098, 0.160784, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_7vm6x")
 theme_override_font_sizes/font_size = 110
-text = "Game Title"
+text = "Gaia
+"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -71,26 +73,21 @@ grow_vertical = 2
 alignment = 1
 
 [node name="Start" type="Button" parent="CanvasLayer"]
+texture_filter = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0.129412, 0.145098, 0.160784, 1)
+theme_override_fonts/font = ExtResource("3_7vm6x")
 theme_override_font_sizes/font_size = 65
 theme_override_styles/normal = SubResource("StyleBoxEmpty_028es")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_th44t")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_x6ugd")
 text = "Start"
 
-[node name="Options" type="Button" parent="CanvasLayer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.129412, 0.145098, 0.160784, 1)
-theme_override_font_sizes/font_size = 65
-theme_override_styles/normal = SubResource("StyleBoxEmpty_028es")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_th44t")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_x6ugd")
-text = "Options"
-
 [node name="Credits" type="Button" parent="CanvasLayer"]
+texture_filter = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0.129412, 0.145098, 0.160784, 1)
+theme_override_fonts/font = ExtResource("3_7vm6x")
 theme_override_font_sizes/font_size = 65
 theme_override_styles/normal = SubResource("StyleBoxEmpty_028es")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_th44t")
@@ -108,18 +105,14 @@ offset_top = -63.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0.129412, 0.145098, 0.160784, 1)
-theme_override_font_sizes/font_size = 45
+theme_override_fonts/font = ExtResource("3_7vm6x")
+theme_override_font_sizes/font_size = 42
 text = "Made for Mini Jam: Ancient"
 horizontal_alignment = 1
-
-[node name="OptionsScreen" parent="." instance=ExtResource("2_8qdjv")]
-visible = false
-layout_mode = 1
 
 [node name="CreditsScreen" parent="." instance=ExtResource("3_lekgj")]
 visible = false
 layout_mode = 1
 
 [connection signal="pressed" from="CanvasLayer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="CanvasLayer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="CanvasLayer/Credits" to="." method="_on_credits_pressed"]

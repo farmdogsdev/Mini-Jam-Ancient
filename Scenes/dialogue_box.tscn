@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://3k3mwsvf3v2i"]
+[gd_scene load_steps=15 format=3 uid="uid://3k3mwsvf3v2i"]
 
 [ext_resource type="Texture2D" uid="uid://dqcnoj6f87ado" path="res://Assets/Sprites/dialogue_box.png" id="1_iwrom"]
 [ext_resource type="Script" path="res://Scripts/dialogue_box.gd" id="1_ixgok"]
 [ext_resource type="Texture2D" uid="uid://7eurh5nehjw4" path="res://Assets/Sprites/dialogue-scroll.png" id="2_1r0sp"]
+[ext_resource type="FontFile" uid="uid://dpxymw7tfv6v0" path="res://Assets/Fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="3_jo1x6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w48js"]
 
@@ -83,7 +84,8 @@ offset_top = 0.0279999
 offset_right = -0.10202
 offset_bottom = -0.0139999
 theme_override_colors/font_color = Color(0.129412, 0.145098, 0.160784, 1)
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("3_jo1x6")
+theme_override_font_sizes/font_size = 20
 text = "Sample Name"
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -104,7 +106,8 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_lu53i")
 [node name="Dialogue" type="RichTextLabel" parent="Control/DialoguePanel"]
 layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 20
+theme_override_fonts/normal_font = ExtResource("3_jo1x6")
+theme_override_font_sizes/normal_font_size = 18
 bbcode_enabled = true
 text = "this is test dialogue"
 autowrap_mode = 2

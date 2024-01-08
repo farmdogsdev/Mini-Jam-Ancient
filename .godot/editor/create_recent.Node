@@ -1,3 +1,5 @@
+AudioStreamPlayer2D
+Label
 ColorRect
 Area2D
 PointLight2D
@@ -10,6 +12,3 @@ LightOccluder2D
 VBoxContainer
 HSplitContainer
 HBoxContainer
-CanvasModulate
-MarginContainer
-Label

@@ -9,7 +9,7 @@
 radius = 1.92592
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_idrjs"]
-radius = 13.0384
+radius = 21.3776
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_hytf3"]
 polygon = PackedVector2Array(-7, -3, 1, -4, 8, 1, 2, 6)
@@ -34,7 +34,7 @@ position = Vector2(0, -7.75)
 action_name = "read"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
-position = Vector2(0, 6.75)
+position = Vector2(0, 7.75)
 shape = SubResource("CircleShape2D_idrjs")
 
 [node name="Label" type="Label" parent="."]

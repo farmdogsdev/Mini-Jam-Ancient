@@ -7,7 +7,6 @@ func _ready():
 func update_dialogue(dialogue):
 	$Control/DialoguePanel/Dialogue.text = dialogue
 
-
 func _on_option_1_pressed():
 	pass # Replace with function body.
 
